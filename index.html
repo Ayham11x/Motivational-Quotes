@@ -2,20 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Motivation</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inspiration Station</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>🌟 Daily Motivation</h1>
-    
-    <!-- 🔥 THIS IS THE MISSING PART -->
-    <p id="quote">Loading quote...</p>
-    
-    <button id="new-quote">New Quote</button>
+  <!-- Loader -->
+  <div id="loader"></div>
+
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
+    <!-- Top-right Search -->
+    <div class="top-bar">
+      <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="Search quotes..." />
+        <span class="search-icon">🔍</span>
+        <div id="search-results"></div>
+      </div>
+    </div>
+
+    <!-- Centered Quote -->
+    <div class="content-wrapper">
+      <h1 id="category">Get Inspired</h1>
+      <p id="quote">Loading quote...</p>
+      <div class="buttons">
+        <button id="new-quote">New Quote</button>
+        <button id="save-quote">Save Quote</button>
+        <button id="view-saved">View Saved</button>
+      </div>
+    </div>
+
+    <!-- User-submitted Quote Panel -->
+    <div id="quote-form">
+      <h2>Submit Your Own Quote</h2>
+      <input type="text" id="user-quote" placeholder="Type your quote here" />
+      <button id="submit-quote">Add Quote</button>
+    </div>
+
+    <!-- Saved Quotes List -->
+    <div id="saved-container" style="display: none;">
+      <h2>Saved Quotes</h2>
+      <ul id="saved-quotes"></ul>
+    </div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
